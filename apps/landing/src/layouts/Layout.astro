@@ -1,4 +1,6 @@
 ---
+import { Book } from "lucide-react";
+
 interface Props {
   title: string;
 }
@@ -18,18 +20,28 @@ const { title } = Astro.props;
   </head>
   <body>
     <header
-      class="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      class="max-w-5xl mx-auto py-6 sm:px-6 lg:px-8 flex justify-between items-center"
     >
       <h1 class="text-2xl font-bold">Unsend</h1>
       <nav>
-        <ul class="flex gap-6">
-          <li><a href="https://docs.unsend.dev" target="_blank">Docs</a></li>
+        <ul class="flex gap-8">
           <li>
-            <a href="https://github.com/unsend-dev/unsend" target="_blank"
-              >Github</a>
-          </li>
-          <li>
-            <a href="https://discord.gg/unsend" target="_blank">Discord</a>
+            <a
+              href="https://docs.unsend.dev"
+              target="_blank"
+              class="flex items-center gap-2"
+            >
+              <Book className="w-4 h-4" />
+              <span>Docs</span>
+            </a>
+            <li>
+              <a href="https://github.com/unsend-dev/unsend" target="_blank"
+                >Github</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.gg/unsend" target="_blank">Discord</a>
+            </li>
           </li>
         </ul>
       </nav>
