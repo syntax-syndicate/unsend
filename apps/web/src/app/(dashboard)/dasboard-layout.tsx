@@ -8,6 +8,7 @@ import {
   BookUser,
   CircleUser,
   Code,
+  Cog,
   Globe,
   Home,
   LayoutDashboard,
@@ -17,6 +18,7 @@ import {
   Package,
   Package2,
   Server,
+  Settings,
   ShoppingCart,
   Users,
   Volume2,
@@ -80,6 +82,11 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
                 <NavButton href="/dev-settings">
                   <Code className="h-4 w-4" />
                   Developer settings
+                </NavButton>
+
+                <NavButton href="/settings">
+                  <Cog className="h-4 w-4" />
+                  Settings
                 </NavButton>
                 {!env.NEXT_PUBLIC_IS_CLOUD || session?.user.isAdmin ? (
                   <NavButton href="/admin">
